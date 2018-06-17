@@ -13,7 +13,8 @@ fi
 WORKDIR=$(cd `dirname $0`; pwd)
 
 ICEPREFIX=/home/apps/cpplibs/Ice-3.6.4
-export LD_LIBRARY_PATH=${ICEPREFIX}/libs:$LD_LIBRARY_PATH
+CPPLIBS=/home/apps/cpplibs
+export LD_LIBRARY_PATH=${ICEPREFIX}/libs:${CPPLIBS}/db-5.3.28/lib:$LD_LIBRARY_PATH
 export PATH=${ICEPREFIX}/bin:$PATH
 
 ICEREGISTRY="icegridregistry"
